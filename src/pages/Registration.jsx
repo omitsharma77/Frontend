@@ -118,7 +118,7 @@ const Registration = () => {
        }
       </Form.Group>
       <Button onClick={handleFormSubmit} variant="primary" type="submit">
-        Submit
+        Sign Up
       </Button>
     </Form>
     <Alert key="warning" variant="warning">
