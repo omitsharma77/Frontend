@@ -97,7 +97,7 @@ const Login = () => {
        }
       </Form.Group>
       <Button onClick={handleFormSubmit} variant="primary" type="submit">
-        Submit
+        Sign In
       </Button>
     </Form>
     <Alert key="warning" variant="warning">
