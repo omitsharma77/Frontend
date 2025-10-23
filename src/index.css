@@ -1,29 +1,33 @@
-.registration{
+.registration {
   padding-top: 100px;
-  background:   rgba(33, 217, 230, 0.944);
+  background: rgba(33, 217, 230, 0.944);
   height: 100vh;
 }
 
-.imgholder h2{
+.imgholder h2 {
   color: blue;
 }
-.main{
+
+.main {
   display: flex;
   min-height: 100vh;
 }
-.left{
+
+.left {
   width: 20%;
 }
-.right{
+
+.right {
   width: 80%;
 }
+
 .sidebar {
   background: rgba(33, 217, 230, 0.944);
-  height: auto; 
-  min-height: 100vh; 
+  height: auto;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; 
+  justify-content: space-between;
   padding: 20px;
 }
 
@@ -33,9 +37,9 @@
 }
 
 .menu-list {
-  flex-grow: 1;           
+  flex-grow: 1;
   display: flex;
-  
+  flex-direction: column; /* mobile responsive fix */
 }
 
 .menu-list .list-group-item {
@@ -55,8 +59,8 @@
 }
 
 .menu-list .list-group-item:hover {
-  background:rgba(19, 96, 221, 0.986);
-  
+  background: rgba(19, 96, 221, 0.986);
+  color: white;
 }
 
 .logout-button {
@@ -75,11 +79,111 @@
 .logout-button:hover {
   background-color: #c82333;
   transform: scale(1.05);
-  
 }
 
+/* -----------------------------
+   ✅ Responsive Design Section
+------------------------------*/
 
+/* Tablet Devices (max-width: 992px) */
+@media (max-width: 992px) {
+  .main {
+    flex-direction: column;
+  }
 
+  .left,
+  .right {
+    width: 100%;
+  }
 
+  .sidebar {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    min-height: auto;
+    padding: 10px;
+  }
 
- 
+  .imgholder {
+    margin-bottom: 0;
+  }
+
+  .menu-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .menu-list .list-group-item {
+    margin: 5px;
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .logout-button {
+    width: auto;
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+}
+
+/* Mobile Devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .registration {
+    padding-top: 60px;
+    height: auto;
+  }
+
+  .main {
+    flex-direction: column;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+  }
+
+  .sidebar {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+  }
+
+  .imgholder h2 {
+    font-size: 18px;
+  }
+
+  .menu-list {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .menu-list .list-group-item {
+    width: 100%;
+    margin-bottom: 8px;
+    font-size: 14px;
+  }
+
+  .logout-button {
+    font-size: 14px;
+    padding: 8px 10px;
+    width: 100%;
+  }
+}
+
+/* Extra Small Devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .imgholder h2 {
+    font-size: 16px;
+  }
+
+  .menu-list .list-group-item {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .logout-button {
+    font-size: 13px;
+    padding: 7px 8px;
+  }
+}
