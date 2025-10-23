@@ -35,7 +35,7 @@ const Login = () => {
         }
 
         if(email && password){
-          axios.post("http://localhost:8000/login",{
+          axios.post("https://backend-6kkf.onrender.com/login",{
             email: email,
             password: password
           }).then((data)=>{
